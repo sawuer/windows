@@ -1,53 +1,32 @@
-/**
- * Module(function constructor)
- */
-
 this.IconComponent = (function() {
 
-	// Constructor
 	function constructor(confs) {
 		this.name = confs.name;
-		this.ext = confs.ext;
-		this.weight = confs.weight;
 		this.img = confs.img;
 		this.entry = confs.entry;
+		this.ID = confs.ID;
 
-
-		// Private logic
-
-
-		// Main function for new window
-		function createIcon(name, ext, weight, img, entry) {
+		function createIcon(name, img, entry, ID) {
 			var template = '\
-				<div class="icon">\
+				<div class="icon" id=' + ID + '>\
 					<div class="icon__img">\
 						<img class="icon__src" src="src/img/icons/' + img + '.png">\
 					</div>\
 					<div class="icon__title">\
-						<span class="icon__info">' + name + (this.ext ? this.ext : '' ) + '</span>\
-						<span class="icon__weight">' + weight + '</span>\
+						<span class="icon__info">' + name + '</span>\
 					</div>\
 				</div>\
 			';
-			// console.log(entry)
 			document.querySelector(entry).innerHTML += template;
 		}
 
-
 		this.init = function() {
-			createIcon(this.name, this.ext, this.weight, this.img, this.entry);
+			createIcon(this.name, this.img, this.entry, this.ID);
 		}
 
-
-		// Init section
 		this.init();
-
-
-
 	}
 
 	return constructor;
-
-	// Public methods
 
 }());

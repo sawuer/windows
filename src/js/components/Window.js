@@ -1,62 +1,134 @@
-/**
- * Module(function constructor)
- */
+var WindowComponent = (function() {
 
-this.WindowComponent = (function() {
-
-	// Constructor
-	function constructor(confs) {
+	 function constructor(confs) {
 		var self = this;
+
 		this.action = confs.action;
 		this.ID = confs.ID;
-		this.height = confs.height;
-		this.width = confs.width;
+
+		function createWindow(ID) {
+			var template = document.createElement('div');
+			template.className = 'window window__hide';
+			template.id = ID;
+			var header = document.createElement('div');
+			var close = document.createElement('div');
+			header.className = 'window-header';
+			close.className = 'window-header__close';
+			header.appendChild(close);
+			template.appendChild(header);
+			document.querySelector('#app').appendChild(template);
+
+			console.log(template);
+
+			// template.ondragstart = function() {
+			//   return false;
+			// };
+			// template.onmousedown = function(e) {
+
+			//   var coords = getCoords(template);
+			//   var shiftX = e.pageX - coords.left;
+			//   var shiftY = e.pageY - coords.top;
+
+			//   template.style.position = 'absolute';
+			//   document.body.appendChild(template);
+			//   moveAt(e);
+
+			//   template.style.zIndex = 1000; // над другими элементами
+
+			//   function moveAt(e) {
+			//     template.style.left = e.pageX - shiftX + 'px';
+			//     template.style.top = e.pageY - shiftY + 'px';
+			//   }
+
+			//   document.onmousemove = function(e) {
+			//     moveAt(e);
+			//   };
+
+			//   template.onmouseup = function() {
+			//     document.onmousemove = null;
+			//     template.onmouseup = null;
+			//   };
+
+			// }
+
+			// template.ondragstart = function() {
+			//   return false;
+			// };
 
 
-		// Private logic
-		var app = document.querySelector('#app');
 
 
-		// Main function for new window
-		function createWindow(height, width, ID) {
-			// var icon = 
-			var template = '\
-				<div id="' + ID + '" class="window window__hide">\
-					<div class="window-header">\
-						<div class="window-header__close"></div>\
-					</div>\
-				</div>\
-			';
-			console.log(template)
-			// Add new window into body
-			app.innerHTML += template;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
 		}
-
-		// console.log(document.getElementById(this.ID))
 
 		function openWindow(id) {
 			document.getElementById(id).classList.remove('window__hide');
 		}
 
-
 		this.init = function() {
-			createWindow(this.height, this.width, this.ID);
-
+			createWindow(this.ID);
 			document.querySelector(this.action).ondblclick = function() {
-				openWindow(self.ID)
-			}
+				openWindow(self.ID);
+			}			
 		}
 
-
-		// Init section
 		this.init();
+	}
 
-
-
+	constructor.prototype.closeIt = function() {
+		var closes = document.querySelectorAll('.window-header__close');
+		for (var i = 0; i < closes.length; i++) {
+			closes[i].onclick = function(e) {
+				e.target.parentNode.parentNode.classList.add('window__hide');
+			}
+		}
 	}
 
 	return constructor;
-
-	// Public methods
 
 }());
