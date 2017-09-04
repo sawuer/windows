@@ -1,6 +1,6 @@
 var myComputer = new WindowComponent({
-	on: '#my-computer',
-	id: 'myCompWindow',
+	action: '#my-computer',
+	ID: 'myCompWindow',
 	width: '200',
 	height: '200',
 });
@@ -12,13 +12,13 @@ myComputer.files = [
 		extension: 'txt', 
 		weight: '2кб',
 		img: 'text-file',
-		entry: '.window'
+		entry: '#myCompWindow'
 	}),
 	new IconComponent({ 
 		name: 'пароли', 
 		extension: 'txt', 
 		weight: '2кб',
 		img: 'text-file',
-		entry: '.window'
+		entry: '#myCompWindow'
 	})
 ]

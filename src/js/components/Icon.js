@@ -35,7 +35,7 @@ this.IconComponent = (function() {
 
 
 		this.init = function() {
-			createIcon(this.name, this.ext, this.weight, this.img, this.entry)
+			createIcon(this.name, this.ext, this.weight, this.img, this.entry);
 		}
 
 
