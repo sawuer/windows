@@ -1,5 +1,6 @@
 var myComputer = new WindowComponent({
 	on: '#my-computer',
+	id: 'myCompWindow',
 	width: '200',
 	height: '200',
 });

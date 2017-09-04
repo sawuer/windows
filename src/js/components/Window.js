@@ -7,6 +7,7 @@ this.WindowComponent = (function() {
 	// Constructor
 	function constructor(confs) {
 		this.on = confs.on;
+		this.id = confs.id;
 		this.height = confs.height;
 		this.width = confs.width;
 
@@ -17,10 +18,10 @@ this.WindowComponent = (function() {
 
 
 		// Main function for new window
-		function createWindow(height, width) {
+		function createWindow(height, width, id) {
 			// var icon = 
 			var template = '\
-				<div class="window">\
+				<div id="' + id + '" class="window window__hide">\
 					<div class="window-header">\
 						<div class="window-header__close"></div>\
 					</div>\
@@ -28,24 +29,23 @@ this.WindowComponent = (function() {
 					</div>\
 				</div>\
 			';
-
+			console.log(322323)
 			var thisClose = document.querySelector('.window-header__close');
-
-			function closeWindow() {
-
-			}
-			console.log(template)
 			// Add new window into body
 			body.innerHTML += template;
 		}
 
 
+		function openWindow() {
+			console.log(document.getElementById(this.id))
+			document.getElementById(this.id).classList.remove('window__hide');
+		}
+
 
 		this.init = function() {
-			console.log(element)
-			createWindow(this.height, this.width);
-			// element.ondblclick = function() {
-			// }
+			createWindow(this.height, this.width, this.id);
+			// console.log(element)
+			// element.ondblclick = openWindow();
 		}
 
 

@@ -8,7 +8,7 @@ this.IconComponent = (function() {
 	function constructor(confs) {
 		this.name = confs.name;
 		this.ext = confs.ext;
-		this.weigth = confs.weigth;
+		this.weight = confs.weight;
 		this.img = confs.img;
 		this.entry = confs.entry;
 
@@ -35,7 +35,7 @@ this.IconComponent = (function() {
 
 
 		this.init = function() {
-			createIcon(this.name, this.ext, this.weigth, this.img, this.entry)
+			createIcon(this.name, this.ext, this.weight, this.img, this.entry)
 		}
 
 

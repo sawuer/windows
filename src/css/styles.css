@@ -16,6 +16,9 @@ body {
 	border: 1px solid #f1f1f1;
 	box-shadow: -5px 5px 10px 0px rgba(0,0,0,.1);
 }
+.window.window__hide {
+	display: none;
+}
 .window-header {
 	background: #0E9AE6;
 	width: 100%;
@@ -41,6 +44,7 @@ body {
 	height: 100px;
 	display: inline-block;
 }
+
 .icon:hover {
 	box-shadow: inset 0px 0px 0px 1px #eee;
 }
@@ -63,6 +67,8 @@ body {
 }
 .icon__weight {
 	color: #aaa;
+	display: block;
+	margin: 0 auto;
 }
 .icon__info {
 	margin: 0;
