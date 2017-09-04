@@ -62,7 +62,5 @@ var DragNDrop = (function() {
       finishDrag();
     };
 
-
-
   }
 }())

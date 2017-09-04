@@ -13,6 +13,9 @@ body {
 	height: 100vh;
 	box-sizing: border-box;
 }
+#app + div {
+	color: #fff;
+}
 /* Window */
 .window {
 	background: #fff;
