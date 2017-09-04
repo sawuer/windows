@@ -5,7 +5,9 @@ body {
 	height: 100%;
 	font-family: sans-serif;
 }
-
+.drag {
+  cursor: pointer;
+}
 /* Window */
 .window {
 	background: #fff;
@@ -86,6 +88,4 @@ body {
 
 
 
-.draggable {
-  cursor: pointer;
-}
+

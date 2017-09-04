@@ -27,14 +27,10 @@ myFiles.files = [
 	new IconComponent({ name: 'Текстовый файл 2', img: 'text-file', entry: '#myCompWindow' }),
 	new IconComponent({ name: 'Текстовый файл 3', img: 'text-file', entry: '#myCompWindow' }),
 	new IconComponent({ name: 'Текстовый файл 4', img: 'text-file', entry: '#myCompWindow' }),
-	new IconComponent({ name: 'Текстовый файл 5', img: 'text-file', entry: '#myCompWindow' }),
-	new IconComponent({ name: 'Текстовый файл 6', img: 'text-file', entry: '#myCompWindow' }),
-	new IconComponent({ name: 'Текстовый файл 7', img: 'text-file', entry: '#myCompWindow' }),
 	new IconComponent({ name: 'Видео-файл 1', img: 'movie', entry: '#myCompWindow' }),
 	new IconComponent({ name: 'Видео-файл 2', img: 'movie', entry: '#myCompWindow' }),
 	new IconComponent({ name: 'Видео-файл 3', img: 'movie', entry: '#myCompWindow' }),
 	new IconComponent({ name: 'Видео-файл 4', img: 'movie', entry: '#myCompWindow' }),
-	new IconComponent({ name: 'Видео-файл 5', img: 'movie', entry: '#myCompWindow' }),
 ];
 
 // Window close engine
