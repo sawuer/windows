@@ -8,7 +8,7 @@ var WindowComponent = (function() {
 
 		function createWindow(ID) {
 			var template = document.createElement('div');
-			template.className = 'window window__hide';
+			template.className = 'window window__hide draggable';
 			template.id = ID;
 			var header = document.createElement('div');
 			var close = document.createElement('div');
@@ -17,93 +17,6 @@ var WindowComponent = (function() {
 			header.appendChild(close);
 			template.appendChild(header);
 			document.querySelector('#app').appendChild(template);
-
-			console.log(template);
-
-			// template.ondragstart = function() {
-			//   return false;
-			// };
-			// template.onmousedown = function(e) {
-
-			//   var coords = getCoords(template);
-			//   var shiftX = e.pageX - coords.left;
-			//   var shiftY = e.pageY - coords.top;
-
-			//   template.style.position = 'absolute';
-			//   document.body.appendChild(template);
-			//   moveAt(e);
-
-			//   template.style.zIndex = 1000; // над другими элементами
-
-			//   function moveAt(e) {
-			//     template.style.left = e.pageX - shiftX + 'px';
-			//     template.style.top = e.pageY - shiftY + 'px';
-			//   }
-
-			//   document.onmousemove = function(e) {
-			//     moveAt(e);
-			//   };
-
-			//   template.onmouseup = function() {
-			//     document.onmousemove = null;
-			//     template.onmouseup = null;
-			//   };
-
-			// }
-
-			// template.ondragstart = function() {
-			//   return false;
-			// };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			
-
-
-
 		}
 
 		function openWindow(id) {
