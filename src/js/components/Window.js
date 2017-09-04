@@ -34,6 +34,7 @@ this.WindowComponent = (function() {
 			function closeWindow() {
 
 			}
+			console.log(template)
 			// Add new window into body
 			body.innerHTML += template;
 		}
@@ -42,9 +43,9 @@ this.WindowComponent = (function() {
 
 		this.init = function() {
 			console.log(element)
-			element.ondblclick = function() {
-				createWindow(this.height, this.width);
-			}
+			createWindow(this.height, this.width);
+			// element.ondblclick = function() {
+			// }
 		}
 
 
