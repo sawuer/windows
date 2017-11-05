@@ -1,58 +1,49 @@
 // Desctop icons
-new IconComponent({ name: 'Другое',img: 'folder', entry: '#app', ID: 'another-files' });
-new IconComponent({ name: 'Мои документы',img: 'folder', entry: '#app', ID: 'my-files' });
-new IconComponent({ name: 'Много файлов',img: 'folder', entry: '#app', ID: 'many-files' });
-
+new Main.Icon({ name: 'Другое',img: 'folder', entry: '#app', ID: 'another-files' });
+new Main.Icon({ name: 'Мои документы',img: 'folder', entry: '#app', ID: 'my-files' });
+new Main.Icon({ name: 'Много файлов',img: 'folder', entry: '#app', ID: 'many-files' });
 
 // Windows
-
-var anotherFiles = new WindowComponent({
+var another = new Main.Win({
 	action: '#another-files',
-	ID: 'anotherFiles',
+	ID: 'another'
 });
-var myFiles = new WindowComponent({
+var myFiles = new Main.Win({
 	action: '#my-files',
-	ID: 'myFiles',
+	ID: 'myFiles'
 });
-var manyFiles = new WindowComponent({
+var manyFiles = new Main.Win({
 	action: '#many-files',
-	ID: 'manyFiles',
+	ID: 'manyFiles'
 });
 
+// Data for windows
+new Main.Icon({ name: 'Текстовый файл 1', img: 'text-file', entry: '#another' }),
+new Main.Icon({ name: 'Текстовый файл 2', img: 'text-file', entry: '#another' }),
+new Main.Icon({ name: 'Текстовый файл 3', img: 'text-file', entry: '#another' }),
+new Main.Icon({ name: 'Текстовый файл 4', img: 'text-file', entry: '#another' })
+new Main.Icon({ name: 'Текстовый файл 1', img: 'text-file', entry: '#myFiles' }),
+new Main.Icon({ name: 'Текстовый файл 2', img: 'text-file', entry: '#myFiles' }),
+new Main.Icon({ name: 'Текстовый файл 3', img: 'text-file', entry: '#myFiles' }),
+new Main.Icon({ name: 'Текстовый файл 4', img: 'text-file', entry: '#myFiles' }),
+new Main.Icon({ name: 'Видео-файл 1', img: 'movie', entry: '#myFiles' }),
+new Main.Icon({ name: 'Видео-файл 2', img: 'movie', entry: '#myFiles' }),
+new Main.Icon({ name: 'Видео-файл 3', img: 'movie', entry: '#myFiles' }),
+new Main.Icon({ name: 'Видео-файл 4', img: 'movie', entry: '#myFiles' })
 
-// Data
-anotherFiles.files = [
-	new IconComponent({ name: 'Текстовый файл 1', img: 'text-file', entry: '#anotherFiles' }),
-	new IconComponent({ name: 'Текстовый файл 2', img: 'text-file', entry: '#anotherFiles' }),
-	new IconComponent({ name: 'Текстовый файл 3', img: 'text-file', entry: '#anotherFiles' }),
-	new IconComponent({ name: 'Текстовый файл 4', img: 'text-file', entry: '#anotherFiles' }),
-];
-myFiles.files = [
-	new IconComponent({ name: 'Текстовый файл 1', img: 'text-file', entry: '#myFiles' }),
-	new IconComponent({ name: 'Текстовый файл 2', img: 'text-file', entry: '#myFiles' }),
-	new IconComponent({ name: 'Текстовый файл 3', img: 'text-file', entry: '#myFiles' }),
-	new IconComponent({ name: 'Текстовый файл 4', img: 'text-file', entry: '#myFiles' }),
-	new IconComponent({ name: 'Видео-файл 1', img: 'movie', entry: '#myFiles' }),
-	new IconComponent({ name: 'Видео-файл 2', img: 'movie', entry: '#myFiles' }),
-	new IconComponent({ name: 'Видео-файл 3', img: 'movie', entry: '#myFiles' }),
-	new IconComponent({ name: 'Видео-файл 4', img: 'movie', entry: '#myFiles' }),
-];
-myFiles.files = [
-	new IconComponent({ name: 'Текстовый файл 1', img: 'text-file', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Текстовый файл 2', img: 'text-file', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Текстовый файл 3', img: 'text-file', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Текстовый файл 4', img: 'text-file', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Текстовый файл 5', img: 'text-file', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Текстовый файл 6', img: 'text-file', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Видео-файл 1', img: 'movie', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Видео-файл 2', img: 'movie', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Видео-файл 3', img: 'movie', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Видео-файл 4', img: 'movie', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Видео-файл 5', img: 'movie', entry: '#manyFiles' }),
-	new IconComponent({ name: 'Видео-файл 6', img: 'movie', entry: '#manyFiles' }),
-];
+new Main.Icon({ name: 'Текстовый файл 1', img: 'text-file', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Текстовый файл 2', img: 'text-file', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Текстовый файл 3', img: 'text-file', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Текстовый файл 4', img: 'text-file', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Текстовый файл 5', img: 'text-file', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Текстовый файл 6', img: 'text-file', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Видео-файл 1', img: 'movie', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Видео-файл 2', img: 'movie', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Видео-файл 3', img: 'movie', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Видео-файл 4', img: 'movie', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Видео-файл 5', img: 'movie', entry: '#manyFiles' }),
+new Main.Icon({ name: 'Видео-файл 6', img: 'movie', entry: '#manyFiles' })
 
-// Window close engine
-myFiles.closeIt();
-anotherFiles.closeIt();
-myFiles.closeIt();
+
+
+closeAllWindows('.window-header__close');

@@ -13,9 +13,6 @@ body {
 	height: 100vh;
 	box-sizing: border-box;
 }
-#app + div {
-	color: #fff;
-}
 /* Window */
 .window {
 	background: #fff;
@@ -25,8 +22,10 @@ body {
 	position: absolute;
 	border: 1px solid #f1f1f1;
 	border-radius: 2px;
-	box-shadow: -5px 5px 10px 0px rgba(0,0,0,.1);
+	z-index: 2;
+	box-shadow: -5px 5px 10px 0px rgba(0,0,0,.15);
 }
+
 .window__hide {
 	display: none;
 }
@@ -48,8 +47,7 @@ body {
 	cursor: pointer;
 }
 .window-header__close:hover {
-		opacity: .5;
-
+	opacity: .7;
 }
 /* Icon */
 .icon {
@@ -60,7 +58,6 @@ body {
 	height: 100px;
 	display: inline-block;
 }
-
 .icon:hover {
 	box-shadow: inset 0px 0px 0px 1px #eee;
 }

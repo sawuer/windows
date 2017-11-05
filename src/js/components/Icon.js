@@ -1,6 +1,6 @@
-this.IconComponent = (function() {
+Main.Icon = (function() {
 
-	function constructor(confs) {
+	return function(confs) {
 		this.name = confs.name;
 		this.img = confs.img;
 		this.entry = confs.entry;
@@ -17,16 +17,11 @@ this.IconComponent = (function() {
 					</div>\
 				</div>\
 			';
-			document.querySelector(entry).innerHTML += template;
+			get(entry).innerHTML += template;
 		}
 
-		this.init = function() {
-			createIcon(this.name, this.img, this.entry, this.ID);
-		}
-
-		this.init();
+		// Init
+		createIcon(this.name, this.img, this.entry, this.ID);
 	}
-
-	return constructor;
 
 }());

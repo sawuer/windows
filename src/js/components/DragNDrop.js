@@ -1,9 +1,11 @@
-var DragNDrop = (function() {
+Main.DragNDrop = (function() {
 
   var app = document.querySelector('#app');
 
   app.onmousedown = function(e) {
-    if (!e.target.classList.contains('draggable')) return;
+    if (!e.target.classList.contains('draggable')) {
+      return;
+    }
     var toX, toY;
     function startDrag(clientX, clientY) {
       e.target.style.position = 'fixed';
@@ -36,7 +38,9 @@ var DragNDrop = (function() {
 
       if (Y < 0) {
         var scrollY = Math.min(-Y, 10);
-        if (scrollY < 0) scrollY = 0; 
+        if (scrollY < 0) {
+          scrollY = 0; 
+        }
         window.scrollBy(0, -scrollY);
         Y = Math.max(Y, 0);
       }
@@ -52,6 +56,7 @@ var DragNDrop = (function() {
       e.target.style.left = X + 'px';
       e.target.style.top = Y + 'px';
     }
+
     startDrag(e.clientX, e.clientY);
 
     app.onmousemove = function(e) {
@@ -63,4 +68,5 @@ var DragNDrop = (function() {
     };
 
   }
-}())
+}());
+
