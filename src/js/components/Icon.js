@@ -10,7 +10,7 @@ Main.Icon = (function() {
 			var template = '\
 				<div class="icon" id=' + ID + '>\
 					<div class="icon__img">\
-						<img class="icon__src" src="src/img/icons/' + img + '.png">\
+						<img class="icon__src" src="src/assets/img/icons/' + img + '.png">\
 					</div>\
 					<div class="icon__title">\
 						<span class="icon__info">' + name + '</span>\
